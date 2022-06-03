@@ -1,0 +1,935 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+#nav {
+    background-color: white;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 3;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#logo{
+  height: 2.8rem;
+    width: auto;
+    padding-top: 0.5rem;
+    position:   absolute;
+    z-index: 600;
+}
+
+#nav a{
+    width: 6.5%;
+}
+
+#nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    margin-right: 10rem;
+}
+
+nav li{
+    list-style: none;
+}
+
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 200%;
+}
+
+.contact {
+  color: white;
+  background-color: #b7d342;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+.contact a{
+  color: white;
+}
+
+.contact a:hover{
+  color: #b7d342;
+}
+.contact:hover {
+  background-color: #f2f2f2;
+  color: #b7d342;
+}
+
+ #accueil{
+    height: 100%;
+    margin: auto;
+    background-image: url(./house.jpg);
+    background-size: cover;
+    color: white;
+
+}
+
+#blockAcc{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding-top: 5rem;
+  vertical-align: middle;  
+}
+
+#accueil h1{
+  font-size: 3.5rem;
+  width: 100%;
+}
+
+#accueil h2{
+  font-size: 3rem;
+}
+
+#parentAccueil{
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+
+#imgLogo{
+  height: 25rem;
+}
+
+
+#menuButton{
+  display: none;
+
+}
+
+#societe{
+    display: flex;
+    flex-direction: row;
+}
+
+#text-p{
+margin: auto;
+width: 35%;
+text-align: center;
+font-weight: bold;
+line-height: 23px;
+padding-bottom: 1rem;
+} 
+
+#societe img{
+  width: 50%;
+}
+
+.texts, #services h2{
+    text-align: center;
+    bottom: 0px;
+    margin-top: 0.5rem;
+    
+}
+
+#img-appear{
+    width: 50%;
+    height: rem;
+}
+
+.appear{
+    opacity:0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transform:  translateX(-100%);
+    background-color: #f2f2f2;
+  } 
+
+.appear.active{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.appearFinal{
+  opacity:0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform:  translateX(-100%);
+  background-color: #f2f2f2;
+}
+
+.appearFinal.active{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.appear2{
+  display: flex;
+  flex-direction: row;
+}
+
+.appear2 img{
+  width: 50%;
+}
+
+.textAppear2{
+  margin: auto;
+  width: 35%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+  overflow: hidden;
+}
+
+.service-block{
+    display: flex;
+    flex-direction: row;
+margin-top: 2rem;
+justify-content: center;
+margin-bottom: 3rem;
+}
+
+#chantier, #conception, #terrain, #cles{
+    height: 15rem;
+    width: 13rem;
+    margin: 1rem;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.divTerrain, .divConception, .divChantier, .divClef{
+  position: relative;
+}
+
+.divConception:before{
+  content: 'Conception de vos projets';
+  bottom: -3rem;
+  width: 86.5%;
+  background-color: #b7d342;
+  right: 1rem;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 3px white;
+}
+
+.divTerrain::before{
+  content: 'Recherche de Terrain';
+  bottom: -3rem;
+  width: 86.5%;
+  background-color: #b7d342;
+  right: 1rem;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 3px white;
+}
+
+.divChantier::before{
+  content: 'Suivi des chantiers';
+  bottom: -3rem;
+  width: 86.5%;
+  background-color: #b7d342;
+  right: 1rem;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 3px white;
+}
+
+.divClef:before{
+  content: 'Projet clé en main';
+  bottom: -3rem;
+  width: 86.5%;
+  background-color: #b7d342;
+  right: 1rem;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 3px white;
+}
+
+.d5Render{
+  background-image: url(./d5render.jpeg);
+  background-size: cover;
+  background-position: 75% 40%;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionServices{
+  background-color: #f2f2f2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.titleServ h1{
+text-align: center;
+}
+
+
+.blockSlider{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+
+.sliderH1{
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-900px * 13));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-900px * 13));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before, .slider::after {
+  /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 500px;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 80s linear infinite;
+          animation: scroll 80s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 500px;
+  width: 900px;
+}
+
+.title{
+  font-size: 2.5rem;
+}
+
+#titleContact{
+text-align: center;
+}
+
+
+
+
+#backgroundPrice{
+    background-image: url('./price.jpg');
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 5%;
+}
+
+#backgroundPrice.active{
+    position: absolute;
+    right: 50%;
+    transition: all 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+#textPrice{
+    width: 33%;
+    text-align: center;
+    line-height: 2rem;
+
+}
+
+#grille-tarif{
+    width: 40%;
+    opacity: 0;
+}
+
+#grille-tarif.active{
+    width: 30%;
+    opacity: 1;
+    transition: all 2s ease-in-out, opacity 3s ease-in-out;
+}
+
+#grille-tarif h3{
+    margin-top: 2rem;
+}
+
+#back-price{
+  margin-right: 5rem;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+opacity:1;
+margin-left: 2rem;
+position: relative;
+height: 25rem;
+}
+
+.sectionPrice{
+  background-color: #f2f2f2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#buttonPrice{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    margin-top: 2rem;
+  }
+  #buttonPrice a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  #buttonPrice a:before,
+  #buttonPrice a:after{
+    position: absolute;
+    content: "Grille tarifaire";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #b7d342;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+  }
+  #buttonPrice a:before{
+    color: white;
+    background: #b7d342;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  #buttonPrice a:after{
+    color: #b7d342;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  #buttonPrice a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+
+
+input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+  }
+  label{margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;}
+  
+  input[type=submit] {
+    background-color: #b7d342;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    color: #b7d342;
+    border-radius:5px;
+    background-color:#f2f2f2;
+    padding:20px;
+    max-width: 30%;
+    width: 440px;
+  }
+
+#contact{
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+ #contlocal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.photoBureau{
+  height: 75%;
+  width: 100%;
+}
+
+#local{
+  width: 30%;
+}
+
+.textBureau{
+  text-align: center;
+  background-color: #b7d342;
+  padding: 0.5rem;
+  color: #f2f2f2;
+  width: 100%;
+}
+
+
+.textBureau span{
+  margin-left: 50px;
+}
+
+footer{
+    background-color: #f2f2f2;
+    height: 2rem;
+    color: #b7d342;
+    padding: 1rem;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+.content{
+  display: none;
+}
+
+
+
+
+@media only screen and (max-width: 64em){
+
+  #blockAcc{
+    width: 100%;
+    font-size: 2.8rem;
+    color: white;
+  }
+
+.contact{
+  height: 8rem;
+  width: 16rem;
+  font-size: 2rem;
+}
+
+  #imgLogo{
+    height: 70vw;
+  }
+
+  #menuButton{
+    margin-top: 4rem;
+    display: block;
+    background-color: #f2f2f2;
+    padding: 2rem;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  20px 20px 22px #707070,
+                 -20px -20px 22px #ffffff;
+  }
+
+  .appear{
+    height: 100vw;
+  }
+
+  #societe{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+  }
+
+  .appear2{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    margin-top: 40rem;
+    
+  }
+
+  #text-p{
+    font-size: 2.5rem;
+    width: 90%;
+    text-align: justify;
+    line-height: 50px;
+    overflow: scroll;
+  }
+
+  .textAppear2 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    width: 90%;
+    text-align: justify;
+    line-height: 45px;
+  }
+
+#societe{
+  background-color: #f2f2f2;
+}
+
+  .container {
+    color: #b7d342;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: auto;
+    width: 80%;
+    max-width: 80%;
+    height: 75rem;
+  }
+  input[type=text], textarea, input[type=email] {
+    width: 100%;
+    height: 9rem;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+}
+
+.container h1{
+  font-size: 4rem;
+}
+
+.container label{
+  font-size: 2.9rem;
+}
+
+label {
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+  font-size: x-large;
+}
+
+  #contlocal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #local{
+    width: 85%;
+    margin: auto;
+    margin-top: 3rem;
+    font-size: 1.9rem;
+  }
+
+
+  .container2{
+    display: none;
+  }
+  
+
+    
+    #societe img, .appear2 img{
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    }
+    
+    #image-text-center{
+      margin-top: 3rem;
+    }
+    
+    #image-text-center h1{
+      margin-top: 2rem;
+    }
+
+  
+.stroke{
+  display: none;
+  }
+  
+  .fixed{
+    z-index: 1000;
+    position: fixed;
+    height: 70vw;
+    width: 100vw;
+  }
+
+  .container2 {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    font-family:'Helvetica Neue', sans-serif;
+}
+
+h1 a {
+  font-size: 2rem;
+  color: #b7d342;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.popover {
+   display: none;
+
+}
+
+.popover:target {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popover .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 0;
+  height: 0;
+  color: #fff;
+  background-color: #f2f2f2;
+  animation: 1s grow ease forwards;
+  text-align: center;
+}
+
+.nav_list  {
+  list-style-type: none;
+}
+
+.nav_list a {
+  text-decoration: none;
+  font-size: 50px;
+  color: #b7d342;
+}
+
+.nav_list_item {
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav_list li {
+  padding: 15px 0;
+  text-transform: uppercase;
+  transform: translateY(200px);
+  opacity: 0;
+  animation: 2s slideUp ease forwards .5s;
+  position: relative;
+}
+
+.nav_list li::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  left: 0;
+  bottom: 10px;
+  background: #b7d342; 
+  transition: all .5s ease;
+}
+
+.nav_list li:hover:before {
+      width: 100%;
+}
+
+.popover p {
+  padding: 50px;
+  opacity: 0;
+  animation: 1s fadeIn ease forwards 1s;
+}
+
+.popover .close::after {
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #b7d342;
+  color: #fff;
+  content: "×";
+  cursor: pointer;
+  opacity: 0; 
+  animation: 1s fadeIn ease forwards .5s;
+}
+
+@keyframes grow {
+  100% {
+    height: 90%;
+    width: 90%;
+ }
+}
+
+@keyframes fadeIn {
+100% {
+  opacity: 1;
+ }
+}
+
+@keyframes slideUp {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.service-block{
+display: block;
+
+}
+
+#chantier, #conception, #terrain, #cles{
+  width: 80%;
+  height: 80vw;
+  margin-left: 5rem;
+}
+
+.divTerrain:before, .divConception:before, .divClef:before, .divChantier:before{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 80%;
+left: 5rem;
+height: 8rem;
+font-size: 3.5rem;
+padding-top: 2rem;
+border-top: solid 5px white;
+}
+
+.title{
+  font-size: 6rem;
+}
+
+.sectionPrice{
+  height: 100vw;
+}
+
+#back-price{
+  height: 100%;
+}
+
+#grille-tarif.active {
+  width: 40%;
+  opacity: 1;
+  transition: all 2s ease-in-out, opacity 3s ease-in-out;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+
+#textPrice p{
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+footer{
+  height: 6rem;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  font-size: 2.5em;
+}
+
+}
